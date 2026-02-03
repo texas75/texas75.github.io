@@ -150,6 +150,24 @@
     </style>
 </head>
 <body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+    <script>
+    document.getElementById('download-pdf').addEventListener('click', () => {
+        const element = document.querySelector('.container');  // Or '#main-content' if you want just the body, but full container looks better
+
+        const opt = {
+            margin:       0.5,          // inches
+            filename:     'Brandon_Steven_Loosle_Resume.pdf',
+            image:        { type: 'jpeg', quality: 0.98 },
+            html2canvas:  { scale: 2 },   // Higher = sharper, but bigger file/slower
+            jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+        };
+
+        // Generate and download
+        html2pdf().set(opt).from(element).save();
+    });
+</script>
     <div class="container">
         <header>
             <h1>Brandon Steven Loosle</h1>
@@ -214,6 +232,9 @@
                         <li>English (native speaker)</li>
                         <li>American sign language (fluent speaker) experience teaching others.</li>
                     </ul>
+                    <button id="download-pdf" style="margin-top: 1.5rem; padding: 0.8rem 1.8rem; background: white; color: var(--primary); border: 2px solid white; border-radius: 50px; font-weight: 600; cursor: pointer; font-size: 1.1rem; box-shadow: 0 4px 12px rgba(0,0,0,0.2); transition: all 0.3s;">
+    Download as PDF
+</button>
                 </section>
             </aside>
 
@@ -317,4 +338,5 @@
     </div>
 </body>
 </html>
+
 
