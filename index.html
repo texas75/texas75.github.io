@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
     <style>
         :root {
-            --primary: #1e40af;       /* deep blue */
+            --primary: #1e40af;
             --primary-light: #3b82f6;
             --text: #1f2937;
             --text-light: #4b5563;
@@ -41,16 +41,28 @@
         }
         header h1 {
             font-size: 2.8rem;
-            margin-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
             font-weight: 700;
         }
+        header img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            margin: 1rem auto;
+            display: block;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease;
+        }
+        header img:hover { transform: scale(1.08); }
         .contact {
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
             gap: 1.5rem;
             font-size: 1.1rem;
-            margin-top: 1rem;
+            margin-top: 0.5rem;
         }
         .contact a { color: white; text-decoration: none; }
         .contact a:hover { text-decoration: underline; }
@@ -133,6 +145,7 @@
             main { display: block; }
             .sidebar { background: white; border: none; padding: 0; break-inside: avoid; }
             header { background: #1e40af; color: white; }
+            header img { border-color: #000; }
         }
     </style>
 </head>
@@ -140,6 +153,8 @@
     <div class="container">
         <header>
             <h1>Brandon Steven Loosle</h1>
+            <!-- Profile photo - upload to /images/profile.jpg in your GitHub repo -->
+            <img src="/images/profile.jpg" alt="Brandon Steven Loosle - Professional Headshot">
             <div class="contact">
                 <span>249N 1210W St George Utah</span>
                 <span>512-646-9681</span>
@@ -167,45 +182,6 @@
                     <ul>
                         <li><strong>Communication</strong>: Excellent verbal and written communication skills, adept at explaining technical concepts to non-technical audiences and collaborating effectively with diverse teams.</li>
                         <li><strong>Conflict Resolution</strong>: Skilled in addressing interpersonal conflicts, fostering a positive work environment, and working collaboratively to find solutions that satisfy all parties involved.</li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2>VOLUNTEER EXPERIENCE</h2>
-                    <h3>Volunteer Temple facility maintenance</h3>
-                    <div class="meta">The Church of Jesus Christ of Latter-day Saints, St George utah Temple.</div>
-                    <ul>
-                        <li>Responsible for the upkeep, repair, and maintenance of temple facilities, ensuring a clean, safe, and welcoming environment for all patrons.</li>
-                        <li>Performing a variety of tasks, from routine cleaning to specialized maintenance work, contributing to the overall upkeep and functionality of the temple.</li>
-                        <li>Utilizing problem-solving skills to promptly and efficiently address facility-related issues.</li>
-                        <li>Demonstrating a strong commitment to community service and spiritual growth, viewing the maintenance of the temple as a form of service to both the community and God.</li>
-                        <li>I specialize in woodworking, electrical work, and overall problem-solving.</li>
-                    </ul>
-
-                    <h3>Missionary Volunteer</h3>
-                    <div class="meta">The Church of Jesus Christ of Latter-day Saints, San Antonio, TX: Oct 2020 – Oct 2022 (2 Years)</div>
-                    <ul>
-                        <li>Engaged in a two-year mission, dedicating full-time service to The Church of Jesus Christ of Latter-day Saints,</li>
-                        <li>demonstrating commitment, resilience, and adaptability.</li>
-                        <li>Conducted community outreach initiatives, establishing and nurturing relationships with diverse local communities to promote spiritual guidance, support, and education.</li>
-                        <li>Provided one-on-one mentorship and counseling to individuals seeking spiritual guidance, developing strong interpersonal and empathetic communication skills.</li>
-                        <li>Participated in language and cultural immersion, enhancing cross-cultural communication and language proficiency (American sign language).</li>
-                    </ul>
-
-                    <h3>Sleep in Heavenly Peace</h3>
-                    <div class="meta">Volunteer Bed Builder Duration: 3 months</div>
-                    <ul>
-                        <li>Participated in a community-driven project to build and deliver beds for underprivileged children in the local area.</li>
-                        <li>Demonstrated strong teamwork and carpentry skills while assembling bed frames and ensuring a high standard of quality and safety .</li>
-                        <li>Contributed to improving the living conditions and well-being of disadvantaged children by providing them with a comfortable place to sleep.</li>
-                    </ul>
-
-                    <h3>Brigham’s Playhouse</h3>
-                    <div class="meta">Community Theater Position: Stagehand, Light Technician, and Prop & Stage Builder Duration: 6 months (spread over 3 years)</div>
-                    <ul>
-                        <li>Collaborated with the production team to set up, maintain, and dismantle stage equipment, ensuring seamless performances and efficient transitions.</li>
-                        <li>Operated lighting equipment and implemented creative lighting designs to enhance the visual impact of theatrical productions.</li>
-                        <li>Assisted in designing, building, and repairingstage props and set pieces, contributing to the immersive atmosphere of various performances.</li>
                     </ul>
                 </section>
 
@@ -242,8 +218,9 @@
 
             <div class="main-content">
                 <section>
-                    <h2>Work</h2>
-                    
+                    <h2>Experience</h2>  <!-- Combined Work + Volunteer here -->
+
+                    <!-- Work Experiences -->
                     <h3>Behavior Specialist & IT Support</h3>
                     <div class="meta">St. George Academy College Preparatory High School, St. George Utah<br>March 2025 – Present</div>
                     <ul>
@@ -295,6 +272,43 @@
                         <li>Greeted and seated customers and provided menus and specials to enhance their dining experience</li>
                         <li>Answered phone calls and made reservations for customers</li>
                         <li>solved problems as they came up including fixing soda fountains and other kitchen appliances</li>
+                    </ul>
+
+                    <!-- Volunteer Experiences now under Experience -->
+                    <h3>Volunteer Temple facility maintenance</h3>
+                    <div class="meta">The Church of Jesus Christ of Latter-day Saints, St George utah Temple.</div>
+                    <ul>
+                        <li>Responsible for the upkeep, repair, and maintenance of temple facilities, ensuring a clean, safe, and welcoming environment for all patrons.</li>
+                        <li>Performing a variety of tasks, from routine cleaning to specialized maintenance work, contributing to the overall upkeep and functionality of the temple.</li>
+                        <li>Utilizing problem-solving skills to promptly and efficiently address facility-related issues.</li>
+                        <li>Demonstrating a strong commitment to community service and spiritual growth, viewing the maintenance of the temple as a form of service to both the community and God.</li>
+                        <li>I specialize in woodworking, electrical work, and overall problem-solving.</li>
+                    </ul>
+
+                    <h3>Missionary Volunteer</h3>
+                    <div class="meta">The Church of Jesus Christ of Latter-day Saints, San Antonio, TX: Oct 2020 – Oct 2022 (2 Years)</div>
+                    <ul>
+                        <li>Engaged in a two-year mission, dedicating full-time service to The Church of Jesus Christ of Latter-day Saints,</li>
+                        <li>demonstrating commitment, resilience, and adaptability.</li>
+                        <li>Conducted community outreach initiatives, establishing and nurturing relationships with diverse local communities to promote spiritual guidance, support, and education.</li>
+                        <li>Provided one-on-one mentorship and counseling to individuals seeking spiritual guidance, developing strong interpersonal and empathetic communication skills.</li>
+                        <li>Participated in language and cultural immersion, enhancing cross-cultural communication and language proficiency (American sign language).</li>
+                    </ul>
+
+                    <h3>Sleep in Heavenly Peace</h3>
+                    <div class="meta">Volunteer Bed Builder Duration: 3 months</div>
+                    <ul>
+                        <li>Participated in a community-driven project to build and deliver beds for underprivileged children in the local area.</li>
+                        <li>Demonstrated strong teamwork and carpentry skills while assembling bed frames and ensuring a high standard of quality and safety .</li>
+                        <li>Contributed to improving the living conditions and well-being of disadvantaged children by providing them with a comfortable place to sleep.</li>
+                    </ul>
+
+                    <h3>Brigham’s Playhouse</h3>
+                    <div class="meta">Community Theater Position: Stagehand, Light Technician, and Prop & Stage Builder Duration: 6 months (spread over 3 years)</div>
+                    <ul>
+                        <li>Collaborated with the production team to set up, maintain, and dismantle stage equipment, ensuring seamless performances and efficient transitions.</li>
+                        <li>Operated lighting equipment and implemented creative lighting designs to enhance the visual impact of theatrical productions.</li>
+                        <li>Assisted in designing, building, and repairingstage props and set pieces, contributing to the immersive atmosphere of various performances.</li>
                     </ul>
                 </section>
             </div>
